@@ -1,4 +1,10 @@
+BasedOnStyle: Microsoft
 IndentWidth: 4
-UseTab: Never
 BreakBeforeBraces: Allman
-AllowShortIfStatementsOnASingleLine: true
+
+# Language: C
+UseTab: Never
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortFunctionsOnASingleLine: All
+PointerAlignment: Right
+ColumnLimit: 100
