@@ -3,10 +3,4 @@
 #set text(size: 12pt)
 #set text(lang: "zh", font: ((name: "Libertinus Serif", covers: "latin-in-cjk"), "Noto Serif SC"))
 
-= 脚本模式
-
-== 基本类型
-== 变量与函数
-== 复合类型
-
-这部分的概念和大部分脚本语言相似。
+= 样式
