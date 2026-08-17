@@ -229,7 +229,12 @@ Typst是专注于排版的语言，所以针对内容块有很多语法糖，可
 + 图片：`#image(path)`，可设置`width`,`height`
 + 图：`#figure`，可设置image标题`caption`
 + 链接：`#link`，例如外链#link("https://example.com/")[示例外链]，以及通过标<example>设置的内链#link(<example>)[示例内链]
-+ 表格：`#table`，例如#table(columns: 2, align: center, [111], [2], [#(1+2)])
++ 表格：`#table`，例如#table(
+    columns: 2,
+    align: center,
+    [111], [2],
+    [#(1 + 2)],
+  )
 
 进行排版时，你既可以通过调用上述排版函数，使用某种样式修饰一个内容块，
 也可以通过`#set`在当前作用域设置并启用一种样式。
@@ -253,4 +258,18 @@ Typst的数学模式和LaTeX类似，但进行了许多优化，使得书写更�
 
 行间数学公式：$ sum_x $
 
-具体的语法可以参照Typst官方文档：#link("https://typst.app/docs/reference/math/")
+具体的语法可以参照Typst官方文档：#link("https://typst.app/docs/reference/math/")。
+
+Typst有自己的公式语法，同时也可以导入mitex包来输入latex公式。
+例子如下：
+
+#import "@preview/mitex:0.2.7": *
+
+typst math equation: $ 7.32 beta + sum_(i=0)^nabla Q_i / 2 $
+
+// use MiTeX to use latex marco in typst
+latex math equation: #mitex(`7.32\beta+\sum_{i=0}^{\nabla}\frac{Q_i}{2}`)
+
+可以看到，渲染后结果相同。这样我们在编写公式的时候，自由度就很高了。
+一方面可以选择编写Typst或LaTeX格式的公式；
+另一方面，从别的LaTeX格式文章中导入公式到自己的Typst文档中，方便且不用转译，非常舒服。
