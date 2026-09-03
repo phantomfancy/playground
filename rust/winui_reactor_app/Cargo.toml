@@ -1,0 +1,10 @@
+[package]
+name = "winui_reactor_app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+windows-reactor = { git = "https://github.com/microsoft/windows-rs.git", rev = "cc5704b649836ca29bc85f0ac294659cbb889d51", version = "0.100.0" }
+
+[profile.release]
+panic = "abort"
