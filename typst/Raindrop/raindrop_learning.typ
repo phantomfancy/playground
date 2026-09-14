@@ -271,9 +271,23 @@ Typst的数学模式和LaTeX类似，但进行了许多优化，使得书写更�
 
 行间数学公式：$ sum_x $
 
+=== 公式语法
+
+Typst公式的语法和LaTeX和UnicodeMath公式语法类似。
 具体的语法可以参照Typst官方文档：#link("https://typst.app/docs/reference/math/")。
 
-=== 公式语法
+=== 符号语法
+
+通过标准库，Typst提供了大量数学符号。
+数学模式上的符号，也可以在标记模式下，通过`#sym`,`#math`等模块前缀直接调用。
+
+例如 $rho$ 和 #sym.rho，
+$nabla alpha = mat(1,2,3;4,5,6;7,8,9;)$和
+#math.nabla#sym.alpha#math.eq#math.mat((1,2,3),(4,5,6),(7,8,9))；
+它们在内容上是相同的，只是正文和公式的字体和样式不同，所以看起来有轻微差别。
+技术上来说，它们插入的是完全相同的Unicode字符。
+
+
 
 === 导入LaTeX公式
 
