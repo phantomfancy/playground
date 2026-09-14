@@ -1,10 +1,7 @@
-# Xmake cache
-.xmake/
-build/
-makefile
-Makefile
-build.ninja
+# Created by https://www.toptal.com/developers/gitignore/api/c,xmake
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,xmake
 
+### C ###
 # Prerequisites
 *.d
 
@@ -58,5 +55,15 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# debug information files
+### xmake ###
+# Xmake cache
+.xmake/
+build/
+
+# End of https://www.toptal.com/developers/gitignore/api/c,xmake
+
+# Existing project-specific rules
+makefile
+Makefile
+build.ninja
 *.dwo
